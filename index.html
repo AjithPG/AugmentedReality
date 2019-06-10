@@ -9,11 +9,17 @@
 		<a-assets>
 			<a-asset-item id="smiley" src="https://cdn.rawgit.com/KhronosGroup/glTF-Sample-Models/9176d098/1.0/SmilingFace/glTF/SmilingFace.gltf"></a-asset-item>
 		</a-assets>
+	       <a-assets>
+               <video id="penguin-sledding" autoplay loop="true" src="penguin-sledding.mp4"></video>
+                </a-assets>
+
 		<a-marker preset="hiro">
-			<a-entity gltf-model="#smiley" rotation="180 0 0">
-				<a-animation attribute="scale" to="0 0 0">
-				</a-animation>
-			</a-entity>
+	
+  <!-- Using the asset management system. -->
+  <a-video src="#penguin-sledding" width="16" height="9" position="0 0 -20"></a-video>
+
+  <!-- Defining the URL inline. Not recommended but more comfortable for web developers. -->
+  <a-video src="airbending.mp4"></a-video>
 		</a-marker>
 		
 	</a-scene>
